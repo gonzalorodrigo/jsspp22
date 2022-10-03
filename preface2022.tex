@@ -61,7 +61,7 @@ overestimated resource requirements and lack of fairsharing mechanism in current
 
 The first full technical paper was presented by Tatsuyoshi Ohmura and proposed to virtually reproduce job
 scheduling and power management choices of compute systems to determine optimal system parameters and
-policies. They Applied this approach to the Supercomputer AOBA, producing scheduling 
+policies. They applied this approach to the Supercomputer AOBA, producing scheduling 
 and power saving parameters that reduced job waiting time by 70\% and energy consumption by 1.2\%.
 
 Kalogirou et al. proposed a VM allocation and node management systems that increases utilization
@@ -77,11 +77,11 @@ study and extend this work.
 
 Marta Jaros, described the use of a genetic algorithms and simulation to define execution schedules that
 reduce makespan and computation cost of complex ultrasound workflows based on moldable parallel tasks. 
-Technique was validated by submitting the executing schedules to a real PBS job scheduler and measuring
-where the maximum mean error of interpolation was within 10\%. 
+The technique was validated by submitting the executing schedules to a real PBS job scheduler with a 
+resulting maximum mean error of interpolation within 10\%. 
 
-In the fifth paper, Nileshwar et al. proposed a set of deadline jobs scheduling algorithms
-that and consider power constraints. Their experiments show that the best approach combines
+In the fifth paper, Nileshwar et al. proposed a set of deadline based job-scheduling algorithms
+that consider power constraints. Their experiments show that their best approach combines
 greedy acceptance with a biased load allocation strategy, maximizing load and increasing
 energy efficiency.
 
@@ -91,8 +91,8 @@ and television. They shared some recent changes to their production scheduler an
 how their tooling for trace-based simulation allows them to gain confidence in production
 upgrades.
 
-The last section of the workshop started with a paper about encoding schema to represent
-the state of a cluster for reinforcement learning driven scheduler. Li et al. argue that
+The last section of the workshop started with a paper about encoding schemes to represent
+the state of a cluster for reinforcement-learning driven scheduling. Li et al. argue that
 by using sparse representation, they can minimize the state vector size and accelerate
 training on the data.
 
@@ -102,7 +102,7 @@ The authors evaluated them through simulation and concluded that the suitability
 algorithms depends on the workload characteristics as well as the range of elasticity
 in the workload.
 
-Venkataswamy et al. proposed RARE, a Deep Reinforcement Learning job scheduler that 
+Venkataswamy et al. proposed RARE, a deep reinforcement learning job scheduler that 
 maximizes the use of renewal energies which power generation is intermittent. The experiment
 data indicate that RARE performs better than existing systems and it can learn from and improve
 upon existing heuristic policies using offline Learning.
@@ -110,13 +110,13 @@ upon existing heuristic policies using offline Learning.
 Mikhail Titov presented a performance evaluation of the implementation of the Process Management
 Interface for Exascale integrated into a pilot-based runtime system called RADICAL-Pilot for
 the HPC platform Summit. Their experimental results show that it can run 65,500 tasks on
-2,048 nodes while keeping a resource utilization at 52\%. At smaller concurrency, the sytem
+2,048 nodes while keeping a resource utilization at 52\%. At smaller concurrency, the system
 can achieve even higher utilization, reaching 85\% at with 8200 tasks over 256 nodes.
 
 Last, but not least, Casanova et al. presented a study on the feasibility of simulation-driven
 portfolio scheduling for distributed cyberinfrastructure. They argue, that on-line simulation 
-is valid tool to determine which scheduling algorithm will performing better for a given
-system state but that inaccuracies in the simulations can greatly affect the results. Their
+can determine which scheduling algorithm will performing better for a given
+system state but inaccuracies in the simulations can greatly affect the results. Their
 main finding is that, even with large simulation inaccuracies, portfolio scheduling can
 outperform the best one-algorithm approach.
 
