@@ -1,0 +1,188 @@
+% This is LLNCS.DEM the demonstration file of
+% the LaTeX macro package from Springer-Verlag
+% for Lecture Notes in Computer Science,
+% version 2.4 for LaTeX2e as of 16. April 2010
+%
+\documentclass{llncs}
+%
+\usepackage{makeidx}  % allows for indexgeneration
+%
+\begin{document}
+%
+\frontmatter          % for the preliminaries
+%
+\pagestyle{headings}  % switches on printing of running heads
+%\addtocmark{Hamiltonian Mechanics} % additional mark in the TOC
+%
+\chapter*{Preface}
+%
+This volume contains the papers presented at the 25th workshop on Job
+Scheduling Strategies for Parallel Processing (JSSPP 2022) that was held on June 3, 2022, in conjunction
+with the 36th IEEE International Parallel and Distributed Processing Symposium (IPDPS 2022).
+The proceedings of previous workshops are also available from Springer as LNCS
+volumes 949, 1162, 1291, 1459, 1659, 1911, 2221, 2537, 2862, 3277, 3834, 4376,
+4942, 5798, 6253, 7698, 8429, 8828, 10353, 10773, 11332, 12326 and 12985. 
+
+This year nineteen papers were submitted to the workshop, of which we accepted twelve. All submitted papers 
+went through a complete review process, with the full version being read and evaluated by an average 
+of 3.4 reviewers. Additionally, one invited keynote paper was included in the workshop. We would like to
+especially thank to our Program Committee members and additional reviewers for their willingness to 
+participate in this effort and their excellent, detailed, and thoughtful reviews. 
+
+For the third time in a row the JSSPP workshop was held fully online due to the worldwide COVID-19 pandemic.
+Despite the obvious logistic problems, all talks were presented live, allowing for the participants to 
+interact with the authors of the papers. We are very thankful to the presenters of accepted papers for 
+their participation in the live workshop session.
+Recordings from all talks at the 2022 edition can be found at the JSSPP's YouTube channel: \url{https://bit.ly/3mXyT8F}.
+
+This year, the workshop was organized into three sessions with eleven technical papers and one paper 
+discussing open scheduling problem and one keynote talk.
+
+The keynote was delivered by Lavanya Ramakrishnan who is is a Senior Scientist and Division Deputy in 
+the Scientific Data Division at Lawrence Berkeley National Lab. Her research interests are in building 
+software tools for computational and data-intensive science with a focus on workflow, resource, and 
+data management. In her keynote, Lavanya Ramakrishnan presented her take on the \emph{future of workflow
+scheduling}. Workflows are important in scientific ecosystems that capture the relation between different 
+steps of processing and data. Workflow tools have focused on providing automation and repeatability but 
+mostly consider HPC resources as blackboxes. In her talk, Lavanya outlined the evolution of scientific 
+workflow needs over the last 20 years and its impact on workflow scheduling on HPC systems. 
+She outlined real science use cases with challenging scheduling problems and presented analyses 
+of workloads on HPC systems over four different large-scale systems. She also discussed the implications 
+of data, resources, networks, containers, interactive notebooks on scheduling. The talk was concluded 
+by discussing the future challenges of scientific workflow scheduling that supports autonomous 
+experimentation and observation in concert with a self-driving infrastructure. 
+
+Papers accepted for this year's JSSPP covered several interesting problems within the
+resource management and scheduling domains and included one \emph{open scheduling problem} (OSP).
+This year's OSP focused on the experience when using Kubernetes container orchestrator in an academic
+environment. Spi\v{s}akov\'{a} et al. demonstrated challenging problems when providing
+system resources ``for free'' to the scientific community, including poor resource reclaiming,
+overestimated resource requirements and lack of fairsharing mechanism in current Kubernetes distributions.
+
+The first full technical paper was presented by Tatsuyoshi Ohmura and proposed to virtually reproduce job
+scheduling and power management choices of compute systems to determine optimal system parameters and
+policies. They Applied this approach to the Supercomputer AOBA, producing scheduling 
+and power saving parameters that reduced job waiting time by 70\% and energy consumption by 1.2\%.
+
+Kalogirou et al. proposed a VM allocation and node management systems that increases utilization
+in active compute nodes through VM consolidation driven by load estimations based on runtime
+information and workload interaction models. Their simulations show that their policies closely match
+or overperform two state-of-art policies that combine VM consolidation with VFS.
+
+The third paper by Chlumsk\'y et al. presented the real-life experience of deploying a walltime
+predictor using the soft walltime feature in PBS Professional. Their results show a significant
+increase over user estimations and include a discussion on the effects on the systems. This paper 
+also included the publication of collected workload traces to allow other researchers to further
+study and extend this work.
+
+Marta Jaros, described the use of a genetic algorithms and simulation to define execution schedules that
+reduce makespan and computation cost of complex ultrasound workflows based on moldable parallel tasks. 
+Technique was validated by submitting the executing schedules to a real PBS job scheduler and measuring
+where the maximum mean error of interpolation was within 10\%. 
+
+In the fifth paper, Nileshwar et al. proposed a set of deadline jobs scheduling algorithms
+that and consider power constraints. Their experiments show that the best approach combines
+greedy acceptance with a biased load allocation strategy, maximizing load and increasing
+energy efficiency.
+
+Vanns et al. shared experiences of developing and running a resource manager that supports
+batch workloads for render farms to produce high quality imagery for major motion pictures
+and television. They shared some recent changes to their production scheduler and discussed
+how their tooling for trace-based simulation allows them to gain confidence in production
+upgrades.
+
+The last section of the workshop started with a paper about encoding schema to represent
+the state of a cluster for reinforcement learning driven scheduler. Li et al. argue that
+by using sparse representation, they can minimize the state vector size and accelerate
+training on the data.
+
+In the eight paper, Halder Lina et al. propose three scheduling algorithms for elastic 
+message passing applications together with six methods to prioritize pending elastic jobs.
+The authors evaluated them through simulation and concluded that the suitability of the
+algorithms depends on the workload characteristics as well as the range of elasticity
+in the workload.
+
+Venkataswamy et al. proposed RARE, a Deep Reinforcement Learning job scheduler that 
+maximizes the use of renewal energies which power generation is intermittent. The experiment
+data indicate that RARE performs better than existing systems and it can learn from and improve
+upon existing heuristic policies using offline Learning.
+
+Mikhail Titov presented a performance evaluation of the implementation of the Process Management
+Interface for Exascale integrated into a pilot-based runtime system called RADICAL-Pilot for
+the HPC platform Summit. Their experimental results show that it can run 65,500 tasks on
+2,048 nodes while keeping a resource utilization at 52\%. At smaller concurrency, the sytem
+can achieve even higher utilization, reaching 85\% at with 8200 tasks over 256 nodes.
+
+Last, but not least, Casanova et al. presented a study on the feasibility of simulation-driven
+portfolio scheduling for distributed cyberinfrastructure. They argue, that on-line simulation 
+is valid tool to determine which scheduling algorithm will performing better for a given
+system state but that inaccuracies in the simulations can greatly affect the results. Their
+main finding is that, even with large simulation inaccuracies, portfolio scheduling can
+outperform the best one-algorithm approach.
+
+
+
+
+We hope you can join us at the next JSSPP workshop, this time in St. Petersburg, Florida USA, on May 19, 2023. Enjoy your reading!
+
+\vspace{1cm}
+\begin{flushright}\noindent
+August 2022\hfill Dalibor Klus\'{a}\v{c}ek\\
+Julita Corbal\'{a}n\\
+Gonzalo P. Rodrigo\\
+\end{flushright}
+%
+\chapter*{Organization}
+%
+\section*{Program Chairs}
+\begin{tabular}{@{}p{5cm}@{}p{7.2cm}@{}}
+Dalibor Klus\'{a}\v{c}ek &CESNET, Czech Republic\\
+Julita Corbal\'{a}n &Barcelona Supercomputing Center, Spain\\
+Gonzalo P. Rodrigo &Apple, USA\\
+\end{tabular}
+%
+\section*{Program Committee}
+\begin{tabular}{@{}p{5cm}@{}p{7.2cm}@{}}
+
+Amaya Booker &Facebook, USA\\
+%Julita	Corbalan	&Barcelona Supercomputing Center, Spain\\
+Henri Casanova &University of Hawaii, USA\\
+Stratos Dimopoulos	&Apple, USA\\
+Hyeonsang	Eom	&Seoul National University, South Korea\\
+%Dick	Epema	&Delft University of Technology, Netherlands\\
+Dror	Feitelson	&Hebrew University, Israel\\
+Ji\v{r}\'{i} Filipovi\v{c} &Masaryk University, Czech Republic\\
+Liana	Fong	&IBM T. J. Watson Research Center, USA\\
+Bogdan Ghit &Databricks, Netherlands\\
+Eitan	Frachtenberg	&Facebook, USA\\
+Alfredo	Goldman	&University of Sao Paulo, Brazil\\
+%Allan	Gottlieb	&New York University, USA\\
+%Zhiling	Lan	&Illinois Institute of Technology, USA\\
+Douglas Jacobsen &NERSC, USA\\
+Cristian Klein &Ume\aa~Univeristy / Elastisys, Sweden\\
+Zhiling Lan &Illinois Institute of Technology, USA\\
+Bill	Nitzberg	&Altair, USA\\
+Christine Morin &INRIA, France\\
+P-O \"Ostberg &Ume\aa~University, Sweden\\
+Larry	Rudolph &Two Sigma, USA\\
+Lavanya Ramakrishnan &Lawrence Berkeley National Lab, USA\\
+Uwe Schwiegelshohn &TU Dortmund, Germany\\
+Leonel Sousa &Universidade de Lisboa, Portugal\\
+Ramin	Yahyapour	&University of G\"ottingen, Germany\\
+\end{tabular}
+%
+
+
+\section*{Additional Reviewers}
+\begin{tabular}{@{}p{5cm}@{}p{7.2cm}@{}}
+Matthew Dearing &Illinois Institute of Technology, USA\\
+Devarshi Ghoshal &Lawrence Berkeley National Lab, USA\\
+Boyang Li &Illinois Institute of Technology, USA\\
+Diogo Marques &Tecnico Lisboa, Portugal\\
+Ricardo Nobre &INESC-ID, Portugal\\
+Abel Souza &Ume\aa~University, Sweden\\
+Xiongxiao Xu &Illinois Institute of Technology, USA\\
+\end{tabular}
+
+
+\end{document}
